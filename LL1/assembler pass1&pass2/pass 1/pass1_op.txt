@@ -1,0 +1,44 @@
+
+ Enter Source File Name:
+s.txt
+
+ Source Code Is:
+
+
+START 200
+MOVER AREG, ='5'
+MOVEM BREG, ='1'
+ADD BREG, A
+LTORG
+SUB CREG, B
+A DS 2
+B DS 2
+END
+
+
+ Literal Table:
+
+ LITERAL        ADDRESS
+='5'            203
+='1'            204
+
+
+ Symbol Table:
+
+ SYMBOL ADDRESS
+  A      206
+  B      208
+
+ Intermediate Code Is:
+
+
+(AD, 01)  (C, 200)
+(IS, 04)        1       (L, 00)
+(IS, 05)        2       (L, 01)
+(IS, 01)        2       (S, 00)
+(AD, 05)
+(IS, 02)        3       (S, 01)
+(DL, 2)         (C, 2)
+(DL, 2)         (C, 2)
+(AD, 02)
+
